@@ -7,10 +7,10 @@ public class Praktikum {
 
         String accountName;
         Account account = Account.createName();
-        boolean dash = Account.checkNameToEmboss();
+        boolean successCreate = Account.checkNameToEmboss();
         accountName = account.getName();
         System.out.println("Уважаемый " + accountName + " карта на ваше имя выпущена.");
-        System.out.println(dash);
+        System.out.println(successCreate);
 
         /*
              В этом методе заложи логику работы с классом Account.
