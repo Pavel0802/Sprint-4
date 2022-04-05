@@ -5,6 +5,7 @@ import org.apache.commons.lang3.RandomUtils;
 
 
 public class Account {
+
     private static String name;
 
     public static String getName() {
