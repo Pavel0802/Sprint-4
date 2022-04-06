@@ -18,7 +18,7 @@ public class AccountNegativeTest {
         this.accountName = accountName;
     }
 
-    @Parameterized.Parameters(name = "{index}:Пользователь с именем {1} не может быть создан")
+    @Parameterized.Parameters(name = "{index}:A user named {1} cannot be created")
     public static Object[][] getAccountName() {
         return new Object[][]{
                 {Account.createName(), Account.getName() + RandomStringUtils.randomAlphabetic(20 - Account.getName().length())},
@@ -34,7 +34,7 @@ public class AccountNegativeTest {
     @Test
     public void AccountNegativeTest() {
         account = new Account(accountName);
-        assertFalse("The name must be shorter than 19 characters", account.checkNameToEmboss());
+        assertFalse("This name should not pass verification", account.checkNameToEmboss());
     }
 
 

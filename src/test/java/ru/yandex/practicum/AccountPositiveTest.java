@@ -18,8 +18,7 @@ public class AccountPositiveTest {
         this.accountName = accountName;
     }
 
-
-    @Parameterized.Parameters(name = "{index}:Пользователь с именем {1} создан")
+    @Parameterized.Parameters(name = "{index}:A user named {1} has been created")
     public static Object[][] getAccountName() {
         return new Object[][]{
                 {Account.createName(), Account.getName().substring(0, 3)},
@@ -27,11 +26,10 @@ public class AccountPositiveTest {
         };
     }
 
-
     @Test
     public void AccountPositiveTest() {
         account = new Account(accountName);
-        assertTrue("The name must be shorter than 19 characters", account.checkNameToEmboss());
+        assertTrue("This is a valid name", account.checkNameToEmboss());
     }
 
 }
